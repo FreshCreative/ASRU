@@ -53,6 +53,42 @@ function context_all_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-events-field_event_'
+  $field_instances['node-events-field_event_'] = array(
+    'bundle' => 'events',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_',
+    'label' => 'Event Year',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-events-field_event_date'
   $field_instances['node-events-field_event_date'] = array(
     'bundle' => 'events',
@@ -88,7 +124,7 @@ function context_all_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -795,6 +831,7 @@ function context_all_field_default_field_instances() {
   t('Banner');
   t('Body');
   t('Date');
+  t('Event Year');
   t('Image');
   t('Link');
   t('Match');

@@ -123,8 +123,7 @@ function match_report_views_default_views() {
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_event_date']['alter']['text'] = '[field_event_date] [field_year_date] ';
+  $handler->display->display_options['fields']['field_event_date']['alter']['text'] = '[field_event_date]';
   $handler->display->display_options['fields']['field_event_date']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_event_date']['element_class'] = 'report-item date';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
@@ -207,43 +206,52 @@ function match_report_views_default_views() {
     'events' => 'events',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Title */
-  $handler->display->display_options['filters']['title']['id'] = 'title';
-  $handler->display->display_options['filters']['title']['table'] = 'node';
-  $handler->display->display_options['filters']['title']['field'] = 'title';
-  $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['group'] = 1;
-  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by title';
-  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
-  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Type (field_type) */
+  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
+  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['value'] = array(
+    5 => '5',
+    2 => '2',
+    3 => '3',
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['field_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_type_tid']['expose']['operator_id'] = 'field_type_tid_op';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['operator'] = 'field_type_tid_op';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['identifier'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_items'] = '10';
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_min_chars'] = '0';
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_field'] = 'title_1';
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_raw_suggestion'] = 1;
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_raw_dropdown'] = 1;
-  $handler->display->display_options['filters']['title']['expose']['autocomplete_dependent'] = 0;
-  /* Filter criterion: Content: Year (field_year_date) */
-  $handler->display->display_options['filters']['field_year_date_value']['id'] = 'field_year_date_value';
-  $handler->display->display_options['filters']['field_year_date_value']['table'] = 'field_data_field_year_date';
-  $handler->display->display_options['filters']['field_year_date_value']['field'] = 'field_year_date_value';
-  $handler->display->display_options['filters']['field_year_date_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_year_date_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_year_date_value']['expose']['operator_id'] = 'field_year_date_value_op';
-  $handler->display->display_options['filters']['field_year_date_value']['expose']['operator'] = 'field_year_date_value_op';
-  $handler->display->display_options['filters']['field_year_date_value']['expose']['identifier'] = 'field_year_date_value';
-  $handler->display->display_options['filters']['field_year_date_value']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'event_type';
+  /* Filter criterion: Content: Event Year (field_event_) */
+  $handler->display->display_options['filters']['field_event__tid']['id'] = 'field_event__tid';
+  $handler->display->display_options['filters']['field_event__tid']['table'] = 'field_data_field_event_';
+  $handler->display->display_options['filters']['field_event__tid']['field'] = 'field_event__tid';
+  $handler->display->display_options['filters']['field_event__tid']['value'] = array(
+    6 => '6',
+    7 => '7',
+    8 => '8',
+    9 => '9',
+    10 => '10',
+    11 => '11',
+    12 => '12',
+  );
+  $handler->display->display_options['filters']['field_event__tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_event__tid']['expose']['operator_id'] = 'field_event__tid_op';
+  $handler->display->display_options['filters']['field_event__tid']['expose']['operator'] = 'field_event__tid_op';
+  $handler->display->display_options['filters']['field_event__tid']['expose']['identifier'] = 'field_event__tid';
+  $handler->display->display_options['filters']['field_event__tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_year_date_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_event__tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_event__tid']['vocabulary'] = 'event_year';
   $handler->display->display_options['block_description'] = 'Report List';
 
   /* Display: Report Page */
