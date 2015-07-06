@@ -1,0 +1,4 @@
+name = View Match Report Filter
+core = 7.x
+package = Custom
+dependencies[] = views

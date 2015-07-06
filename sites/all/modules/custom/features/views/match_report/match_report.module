@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Match Report feature.
+ */
+
+include_once 'match_report.features.inc';
