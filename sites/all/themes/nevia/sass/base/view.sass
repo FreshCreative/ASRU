@@ -1,0 +1,203 @@
+.view-events
+	#event-info
+		&
+			float: left
+			width: 100%
+			margin: 20px 0 0
+			border: 1px solid #F0F0F0
+			border-width: 1px 0 0
+			padding: 20px 0
+
+		.event-info-row
+			float: left
+
+			h3
+				font-size: 1.3em
+				font-weight: 600
+				color: $dark-blue
+				margin: 0 0 9px
+
+			a
+				color: black
+
+	#future_years
+		color: white
+		font-size: 1.3em
+		font-weight: 600
+		text-align: center
+		display: block
+		float: left
+		width: 100%
+		margin: 0 0 20px
+
+		&:hover,
+		&:focus
+			color: $light-blue
+			text-decoration: none
+
+
+.view-event
+	&.view-display-id-page_1
+		.image
+			img
+				display: block
+				width: 100%
+				height: auto
+				margin: 0 0 30px
+				padding: 6px
+				box-shadow: 0 0 7px rgba(0, 0, 0, 0.07)
+				border: 1px solid #f2f2f2
+				border-radius: 5px
+
+				&:hover
+					cursor: pointer
+					opacity: .9
+
+	// #event-gallery
+	// 	display: block
+	// 	float: left
+	// 	padding: 12px 20px
+	// 	background-color: $dark-blue
+	// 	color: #FFF
+	// 	font-weight: 600
+	// 	border-radius: 5px
+	// 	transition: all .3s
+
+	// 	&:hover
+	// 		background-color: lighten($dark-blue, 5%)
+	// 		text-decoration: none
+	// 		box-shadow: 0 0 7px rgba(139, 211, 245, 0.8)
+	// 		transition: all .3s
+
+#views-exposed-form-result-block-1
+	margin: 0 0 25px
+
+	.form-text
+		display: block
+		padding: 4px
+		margin: 0 0 8px
+
+	.description
+		font-size: 1em
+		color: #525252
+
+	.form-submit
+		display: block
+		margin: 0
+		padding: 8px 15px
+		border: 0
+		background-color: #0D004E
+		color: #fff
+
+#block-views-result-block-1
+	.views-exposed-form
+		label
+			float: left
+			width: 120px
+			margin: 7px 0
+			font-weight: 600
+
+	#edit-title-wrapper
+		float: left
+		padding: .5em 1em 0 0
+		width: 367px
+
+	#edit-field-year-date-value-wrapper
+		float: left
+		width: 150px
+
+		select
+			border: 1px solid #DFDFDF
+			background-color: #fff
+			display: block
+			padding: 10px
+			margin: 3px 0		
+
+	.view-header
+		margin: 0 0 20px
+		
+	h3
+		color: $dark-grey
+		font-size: 1.3em
+		font-weight: 600
+		margin: 0 0 10px
+		padding: 0
+		text-align: left
+		float: left
+		width: 100%
+
+	.report
+		&
+			margin: 0 0 30px
+
+		.report-header
+			&>div
+				float: left
+				background: $dark-grey
+				color: $light-blue
+				font-size: 1em
+				text-align: left
+				padding: 5px 8px
+
+			.date
+				width: 108px
+
+			.event
+				width: 170px
+
+			.title
+				width: 170px
+
+			.match
+				width: 142px
+
+			.venue
+				width: 109px
+
+			.score
+				width: 51px
+
+			.match-report
+				width: 79px
+				text-align: center
+				
+
+			.gallery
+				width: 70px
+				text-align: center			
+
+		.report-row
+			&
+				float: left
+				background-color: $light-blue
+				margin: 0 0 2px
+
+			.report-item
+				font-size: 0.9em
+				font-weight: 600
+				background-color: $light-blue
+				border-right: 2px solid #fff
+				display: table-cell
+				padding: 8px
+				line-height: 1.2em
+
+				&.date
+					width: 108px
+
+				&.title
+					width: 170px
+
+					a
+						color: black
+
+				&.match-report
+					width: 79px
+					text-align: center
+					
+
+				&.gallery
+					width: 68px
+					text-align: center
+
+				&:last-of-type
+					border: 0

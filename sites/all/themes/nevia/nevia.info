@@ -1,0 +1,51 @@
+name = Nevia
+description = Nevia theme, developed by <a href="http://tabvn.com/">Tabvn</a>.
+core = 7.x
+
+
+scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery.modernizr.js
+scripts[] = js/jquery.easing.1.3.js
+scripts[] = js/jquery.jcarousel.js
+scripts[] = js/nevia.js
+scripts[] = js/bjqs/bjqs.js
+scripts[] = js/custom.js
+scripts[] = js/script.js
+
+; System stylesheets we'd like to avoid:
+stylesheets[all][] = css/bootstrap/bootstrap-theme.min.css
+stylesheets[all][] = css/bootstrap/bootstrap.min.css
+stylesheets[all][] = css/fontawesome.css
+stylesheets[all][] = css/bjqs/bjqs.css
+stylesheets[all][] = css/base/style.css
+
+
+regions[header] = Header
+regions[main_menu] = Main menu
+regions[slider] = Slider
+regions[highlighted] = Highlighted
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[banner] = Banner
+regions[content] = Content
+regions[content-bottom] = Content bottom
+regions[help] = Help
+regions[bottom] = Bottom
+
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+
+settings[toggle_name] = 0
+settings[toggle_slogan] = 1
+settings[toggle_node_user_picture] = 0
+
+settings[main_menu_style] = style-1
+settings[homepage_title] = 1
+settings[nevia_theme_color] = #169FE6
+settings[theme_background_image] = noise.png

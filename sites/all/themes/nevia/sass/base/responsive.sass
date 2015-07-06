@@ -1,0 +1,107 @@
+/* Responsive Style */
+@media all and (min-width: 0px) and (max-width: 767px)
+	header
+		.container
+			background: none
+
+		#logo
+			margin: 0
+
+			img
+				margin: 20px 0 0
+
+		#phone
+			float: left
+			margin: 15px 0
+			width: 100%
+			text-align: center
+
+	#search .home-icon 
+		color: $orange
+		display: block
+		float: left
+		font-size: 2em
+
+	#edit-submit--2,
+	#edit-submit--3
+		border: 0
+		padding: 10px
+		color: white
+		background: #f07330
+		border-radius: 7px
+
+	.form-item-search-block-form
+		input[type='text']
+			width: 66%
+			margin-left: 5%
+			padding: 5px
+
+	nav#navigation
+		&
+			background: #fff
+
+		ul.menu
+			float: left
+			width: 100%
+			padding: 20px 0 0
+
+			li
+				&
+					width: 100%
+					float: left
+
+				a
+					display: block
+					width: 100%
+					border-radius: 10px
+					margin: 0 0 10px	
+					text-align: center
+					font-size: 1.2em
+					background: $orange
+
+					&:hover,
+					&.active
+						background: darken($orange, 30%)
+
+	.region-sidebar-second
+		.block
+			h2
+				margin: 20px 0!important
+
+	#bottom
+		background: $black
+		color: $white
+		line-height: 1.6em
+		margin: 14px 0 0
+
+		a
+			color: $white
+
+	#block-block-17
+		margin: 15px 0
+		float: left
+		width: 100%
+
+		.view_project
+			float: left
+			text-align: center
+			font-size: 1.2em
+			width: 100%
+			padding: 13px 18px
+			font-weight: 600			
+
+@media all and (min-width: 768px) and (max-width: 991px)
+	nav#navigation #block-multiblock-1 input[type='text']
+		border: 0
+		width: 153px
+
+	#block-block-11
+		margin: 30px 0 0
+
+	#block-block-17
+		margin: -54px 0 0 12px
+
+@media all and (min-width: 992px) and (max-width: 1199px)
+	#block-block-17
+		margin: 195px 0 0
+@media all and (min-width: 1200px)
