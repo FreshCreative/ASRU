@@ -206,43 +206,14 @@ function match_report_views_default_views() {
     'events' => 'events',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Type (field_type) */
-  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
-  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
-  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
-  $handler->display->display_options['filters']['field_type_tid']['value'] = array(
-    5 => '5',
-    2 => '2',
-    3 => '3',
-    4 => '4',
-  );
-  $handler->display->display_options['filters']['field_type_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_type_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_type_tid']['expose']['operator_id'] = 'field_type_tid_op';
-  $handler->display->display_options['filters']['field_type_tid']['expose']['operator'] = 'field_type_tid_op';
-  $handler->display->display_options['filters']['field_type_tid']['expose']['identifier'] = 'field_type_tid';
-  $handler->display->display_options['filters']['field_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
-  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'event_type';
   /* Filter criterion: Content: Event Year (field_event_) */
   $handler->display->display_options['filters']['field_event__tid']['id'] = 'field_event__tid';
   $handler->display->display_options['filters']['field_event__tid']['table'] = 'field_data_field_event_';
   $handler->display->display_options['filters']['field_event__tid']['field'] = 'field_event__tid';
-  $handler->display->display_options['filters']['field_event__tid']['value'] = array(
-    6 => '6',
-    7 => '7',
-    8 => '8',
-    9 => '9',
-    10 => '10',
-    11 => '11',
-    12 => '12',
-  );
+  $handler->display->display_options['filters']['field_event__tid']['group'] = 1;
   $handler->display->display_options['filters']['field_event__tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_event__tid']['expose']['operator_id'] = 'field_event__tid_op';
+  $handler->display->display_options['filters']['field_event__tid']['expose']['label'] = 'Year';
   $handler->display->display_options['filters']['field_event__tid']['expose']['operator'] = 'field_event__tid_op';
   $handler->display->display_options['filters']['field_event__tid']['expose']['identifier'] = 'field_event__tid';
   $handler->display->display_options['filters']['field_event__tid']['expose']['remember_roles'] = array(
@@ -252,6 +223,40 @@ function match_report_views_default_views() {
   );
   $handler->display->display_options['filters']['field_event__tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_event__tid']['vocabulary'] = 'event_year';
+  /* Filter criterion: Content: Type (field_type) */
+  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
+  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_type_tid']['expose']['operator_id'] = 'field_type_tid_op';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['label'] = 'Group';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['operator'] = 'field_type_tid_op';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['identifier'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'event_type';
+  /* Filter criterion: Content: Country (field_country) */
+  $handler->display->display_options['filters']['field_country_tid']['id'] = 'field_country_tid';
+  $handler->display->display_options['filters']['field_country_tid']['table'] = 'field_data_field_country';
+  $handler->display->display_options['filters']['field_country_tid']['field'] = 'field_country_tid';
+  $handler->display->display_options['filters']['field_country_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_country_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_country_tid']['expose']['operator_id'] = 'field_country_tid_op';
+  $handler->display->display_options['filters']['field_country_tid']['expose']['label'] = 'Country';
+  $handler->display->display_options['filters']['field_country_tid']['expose']['operator'] = 'field_country_tid_op';
+  $handler->display->display_options['filters']['field_country_tid']['expose']['identifier'] = 'field_country_tid';
+  $handler->display->display_options['filters']['field_country_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_country_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_country_tid']['vocabulary'] = 'event_country';
   $handler->display->display_options['block_description'] = 'Report List';
 
   /* Display: Report Page */
