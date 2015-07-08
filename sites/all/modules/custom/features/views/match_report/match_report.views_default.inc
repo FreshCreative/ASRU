@@ -69,6 +69,10 @@ function match_report_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -230,7 +234,7 @@ function match_report_views_default_views() {
   $handler->display->display_options['filters']['field_type_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_type_tid']['expose']['operator_id'] = 'field_type_tid_op';
-  $handler->display->display_options['filters']['field_type_tid']['expose']['label'] = 'Group';
+  $handler->display->display_options['filters']['field_type_tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['field_type_tid']['expose']['operator'] = 'field_type_tid_op';
   $handler->display->display_options['filters']['field_type_tid']['expose']['identifier'] = 'field_type_tid';
   $handler->display->display_options['filters']['field_type_tid']['expose']['remember_roles'] = array(
@@ -240,14 +244,62 @@ function match_report_views_default_views() {
   );
   $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'event_type';
-  /* Filter criterion: Content: Country (field_country) */
+  /* Filter criterion: Global: Dependent filter */
+  $handler->display->display_options['filters']['views_dependent_filter']['id'] = 'views_dependent_filter';
+  $handler->display->display_options['filters']['views_dependent_filter']['table'] = 'views';
+  $handler->display->display_options['filters']['views_dependent_filter']['field'] = 'views_dependent_filter';
+  $handler->display->display_options['filters']['views_dependent_filter']['group'] = 1;
+  $handler->display->display_options['filters']['views_dependent_filter']['controller_filter'] = 'field_type_tid';
+  $handler->display->display_options['filters']['views_dependent_filter']['controller_values'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['views_dependent_filter']['dependent_filters'] = array(
+    'field_event_location_tid' => 'field_event_location_tid',
+    'field_country_tid' => 0,
+  );
+  /* Filter criterion: Global: Dependent filter */
+  $handler->display->display_options['filters']['views_dependent_filter_1']['id'] = 'views_dependent_filter_1';
+  $handler->display->display_options['filters']['views_dependent_filter_1']['table'] = 'views';
+  $handler->display->display_options['filters']['views_dependent_filter_1']['field'] = 'views_dependent_filter';
+  $handler->display->display_options['filters']['views_dependent_filter_1']['group'] = 1;
+  $handler->display->display_options['filters']['views_dependent_filter_1']['controller_filter'] = 'field_type_tid';
+  $handler->display->display_options['filters']['views_dependent_filter_1']['controller_values'] = array(
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['views_dependent_filter_1']['dependent_filters'] = array(
+    'field_country_tid' => 'field_country_tid',
+    'field_event_location_tid' => 0,
+  );
+  /* Filter criterion: Content: Event Location (field_event_location) */
+  $handler->display->display_options['filters']['field_event_location_tid']['id'] = 'field_event_location_tid';
+  $handler->display->display_options['filters']['field_event_location_tid']['table'] = 'field_data_field_event_location';
+  $handler->display->display_options['filters']['field_event_location_tid']['field'] = 'field_event_location_tid';
+  $handler->display->display_options['filters']['field_event_location_tid']['value'] = array(
+    19 => '19',
+    18 => '18',
+  );
+  $handler->display->display_options['filters']['field_event_location_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_event_location_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['operator_id'] = 'field_event_location_tid_op';
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['operator'] = 'field_event_location_tid_op';
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['identifier'] = 'field_event_location_tid';
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_event_location_tid']['expose']['reduce'] = TRUE;
+  $handler->display->display_options['filters']['field_event_location_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_event_location_tid']['vocabulary'] = 'event_location';
+  /* Filter criterion: Content: Event Country (field_country) */
   $handler->display->display_options['filters']['field_country_tid']['id'] = 'field_country_tid';
   $handler->display->display_options['filters']['field_country_tid']['table'] = 'field_data_field_country';
   $handler->display->display_options['filters']['field_country_tid']['field'] = 'field_country_tid';
   $handler->display->display_options['filters']['field_country_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_country_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_country_tid']['expose']['operator_id'] = 'field_country_tid_op';
-  $handler->display->display_options['filters']['field_country_tid']['expose']['label'] = 'Country';
+  $handler->display->display_options['filters']['field_country_tid']['expose']['label'] = 'Location';
   $handler->display->display_options['filters']['field_country_tid']['expose']['operator'] = 'field_country_tid_op';
   $handler->display->display_options['filters']['field_country_tid']['expose']['identifier'] = 'field_country_tid';
   $handler->display->display_options['filters']['field_country_tid']['expose']['remember_roles'] = array(

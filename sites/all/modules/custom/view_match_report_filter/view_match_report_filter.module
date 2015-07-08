@@ -1,24 +1,68 @@
 <?php
 
-/*
- * Implementation of hook_form_alter()
- */
-function view_match_report_filter_form_alter(&$form, &$form_state, $form_id)
-{
-  // dpm($form);
+// /*
+//  * Implementation of hook_form_views_exposed_form_alter ()
+//  */
+// function view_match_report_filter_form_views_exposed_form_alter(&$form, &$form_state)
+// {
 
-  // if (true) {
-  //   # code...
-  // }
-}
+// 	if(!empty($form_state['values'])) {
+// 		$form_state['input'] = array_merge($form_state['input'], $form_state['values']);
+// 	}
 
+// 	$form['field_country_tid']['#prefix'] = '<div id="country_wrapper">';
+// 	$form['field_country_tid']['#suffix'] = '</div>';
 
-/*
- * Implementation of hook_form_alter()
- */
-function view_match_report_filter_views_query_alter(&$view, &$query)
-{
+// 	$form['field_type_tid']['#ajax'] = array(
+// 		'callback' => '_update_country_callback'
+// 	);
 
-  dpm($view);
-  //$query->where[1]['conditions'][2]['value'][':field_data_field_year_date_field_year_date_value'] = 2016;
-}
+// 	$form['field_type_tid']['#default_value'] = 3;
+
+// 	if ( $form['#id'] == 'views-exposed-form-result-block-1' ) {
+// 		$selectedType = $form_state['input']['field_type_tid'];
+// 	}
+
+// 	if ( isset( $selectedType ) ) {
+// 		$form['field_country_tid']['#options'] = _update_country_list( $selectedType );
+// 	}
+
+// 	print_r($form);
+
+// }
+
+// /**
+//  * Selects just the second dropdown to be returned for re-rendering
+//  *
+//  * Since the controlling logic for populating the form is in the form builder
+//  * function, all we do here is select the element and return it to be updated.
+//  *
+//  * @return renderable array (the second dropdown)
+//  */
+// function _update_country_callback(&$form, $form_state) {
+//   return array(
+//     '#type' => 'ajax',
+//     '#commands' => array(
+//       ajax_command_replace("#country_wrapper", render($form['field_country_tid']))
+//     )
+//   );
+// }
+
+// function _update_country_list($type = FALSE) {
+// 	$result = [];
+
+// 	// ASRC
+// 	if ($type == '3') {
+// 		$result = array(
+// 			'national' => 'National',
+// 			'Domestic' => 'Domestic',
+// 		);
+// 	}else{
+// 		$result = array(
+// 			'A' => 'A',
+// 			'B' => 'B',
+// 		);		
+// 	}
+
+// 	return $result;
+// }
