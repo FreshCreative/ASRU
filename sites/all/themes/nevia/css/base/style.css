@@ -44,7 +44,7 @@ table {
 header {
   background: url(/sites/all/themes/nevia/image/header_bg.jpg) black center no-repeat; }
   header .container {
-    background: url(/sites/all/themes/nevia/image/header_player.png) right bottom no-repeat; }
+    background: url(/sites/all/themes/nevia/image/header_player.png) 620px bottom no-repeat; }
   header #logo {
     float: left;
     margin: 16px 0; }
@@ -61,6 +61,11 @@ header {
     font-weight: 600; }
     header #phone span {
       font-size: 0.7em; }
+  header #tri_services img{
+    float: right;
+    width: 140px;
+    margin: 30px 0;
+  }
 
 #banner {
   display: none;
@@ -326,6 +331,11 @@ body {
     display: block;
     padding: 10px;
     margin: 3px 0; }
+
+  #block-views-result-block-1 .views-submit-button {
+    display: none;
+  }
+  
 #block-views-result-block-1 .view-header {
   margin: 0 0 20px; }
 #block-views-result-block-1 h3 {
@@ -478,13 +488,31 @@ body {
 #block-block-14 .content {
   display: none; }
 
+#block-views-news-ticker-block {
+  padding: 0 30px;
+}
+
+#block-views-news-ticker-block h2{
+  color: #4D4D4D;
+  font-size: 1.7em;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+
+#block-views-news-ticker-block marquee {
+  font-size: 1.25em;
+  line-height: 1.7em;
+  margin: 0 0 20px;
+}
+
 #block-views-sponsors-block {
   padding: 30px; }
+
 #block-views-sponsors-block .sponsors img {
   float: left;
   height: auto;
-  width: 18%;
-  margin: 0 2% 0 0; }
+  width: 20%;
+  margin: 0 5% 0 0; }
 
 #block-views-result-block-2 {
   float: left;
@@ -658,6 +686,10 @@ body {
   width: 100%;
   float: left; }
 
+#block-views-player-profile-block {
+  margin: 0 0 110px;
+}
+
 #block-views-player-profile-block .grid-row {
   margin: 0 0 20px; }
   #block-views-player-profile-block .grid-row .profile-image img {
@@ -673,6 +705,57 @@ body {
     color: #0d004e;
     padding: 10px 0;
     border: 1px solid whitesmoke; }
+
+  #block-views-player-profile-block .profile-row{
+    position: relative;
+  }
+
+  #block-views-player-profile-block .profile-row:hover .profile-extra{
+    display: block;
+    cursor: pointer;
+  }  
+
+  #block-views-player-profile-block .grid-row .profile-extra {
+    position: absolute;
+    background-color: #fff;
+    width: 224px;
+    border: 1px solid #F5F5F5;
+    bottom: -159px;
+    z-index: 2;
+    display: none;
+  }    
+
+  #block-views-player-profile-block .grid-row .profile-extra .inforow{
+    margin: 12px 0;
+  }
+
+  #block-views-player-profile-block .grid-row .profile-extra .inforow .label{
+    color: #180B56;
+    font-size: 1em;
+    font-weight: 500;  
+  }  
+
+  #block-views-player-profile-group-block .player-profile-group{
+
+  }
+
+  #block-views-player-profile-group-block .player-profile-group img{
+    width: 100%;
+    height: auto;    
+  }
+
+  #block-views-player-profile-group-block .player-profile-group a{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+    color: #1F2229;
+    font-size: 1.2em;   
+  } 
+
+  .node-type-profile-group .field-name-field-team-image{
+    margin: 0 0 30px;
+  }
 
 #block-views-gallery-page-block .image {
   height: 310px; }

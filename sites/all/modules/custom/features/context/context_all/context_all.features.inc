@@ -26,6 +26,14 @@ function context_all_node_info() {
       'title_label' => t('Event Name'),
       'help' => '',
     ),
+    'news_ticker' => array(
+      'name' => t('News Ticker'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Basic page'),
       'base' => 'node_content',
@@ -36,6 +44,14 @@ function context_all_node_info() {
     ),
     'profile' => array(
       'name' => t('Profile'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'profile_group' => array(
+      'name' => t('Profile Group'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

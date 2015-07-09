@@ -25,8 +25,7 @@
 	<div class="event-info-row">
 		<h3>Date</h3>
 		<div class="event-details">
-			<?php print $view->result[0]->field_field_event_date[0]['raw']['value']; ?> 
-			<?php print date('Y', strtotime($view->result[0]->field_field_year_date[0]['raw']['value'])); ?>
+			<?php print $view->result[0]->field_field_event_date[0]['raw']['value']; ?>
 		</div>
 	</div>
 	<div class="event-info-row">

@@ -154,13 +154,13 @@ function context_all_context_default_contexts() {
           'module' => 'views',
           'delta' => 'featured_slider-block',
           'region' => 'slider',
-          'weight' => '-10',
+          'weight' => '-25',
         ),
         'block-18' => array(
           'module' => 'block',
           'delta' => '18',
           'region' => 'slider',
-          'weight' => '-9',
+          'weight' => '-24',
         ),
         'block-24' => array(
           'module' => 'block',
@@ -172,7 +172,13 @@ function context_all_context_default_contexts() {
           'module' => 'views',
           'delta' => 'sponsors-block',
           'region' => 'content-bottom',
-          'weight' => '-10',
+          'weight' => '-25',
+        ),
+        'views-news_ticker-block' => array(
+          'module' => 'views',
+          'delta' => 'news_ticker-block',
+          'region' => 'content-bottom',
+          'weight' => '-24',
         ),
       ),
     ),
@@ -258,8 +264,10 @@ function context_all_context_default_contexts() {
     'node' => array(
       'values' => array(
         'events' => 'events',
+        'news_ticker' => 'news_ticker',
         'page' => 'page',
         'profile' => 'profile',
+        'profile_group' => 'profile_group',
         'sponsor' => 'sponsor',
       ),
       'options' => array(
@@ -373,9 +381,9 @@ function context_all_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-player_profile-block' => array(
+        'views-player_profile_group-block' => array(
           'module' => 'views',
-          'delta' => 'player_profile-block',
+          'delta' => 'player_profile_group-block',
           'region' => 'content',
           'weight' => '-10',
         ),
